@@ -3,6 +3,7 @@ import './style.css'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import PanelHead from './components/panelHead.vue'
 
 //路由守卫
 router.beforeEach((to, from) => {
@@ -21,12 +22,13 @@ router.beforeEach((to, from) => {
 // 引入全部图标组件
 // 如果您正在使用CDN引入，请删除下面一行。
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-
 const app = createApp(App)
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
+
+app.component('PanelHead',PanelHead)
 //路由挂载
 app.use(router)
 //状态管理挂载
