@@ -42,6 +42,7 @@
   // 点击菜单
   const handleClick = (item,index)=>{
     store.commit('addMenu',item.meta);
+    store.commit('updateMenuActive',index)
     router.push(item.meta.path);
   }
 </script>

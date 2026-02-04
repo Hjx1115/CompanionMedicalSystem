@@ -1,5 +1,5 @@
 <template>
-  <PanelHead/>
+  <PanelHead :route="route"/>
   <div class="addBtn">
     <el-button :icon="Plus" @click="open(null)" type="primary">添加权限</el-button>
   </div>
@@ -74,7 +74,9 @@
 import { ref, reactive, onMounted, nextTick } from "vue";
 import { getPermissionGroup, addPermissionGroup, getMenuList } from "../../../api";
 import { Plus } from '@element-plus/icons-vue'
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
 // 表单数据
 const form = reactive({
   name: "",

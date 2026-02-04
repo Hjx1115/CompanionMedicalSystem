@@ -37,3 +37,11 @@ export function getMenuSelectList() {
 export function updateUser(data) {
   return request.post('/update/user',data);
 }
+//用户菜单权限
+export function getUserMenu() {
+    return request.get('/menu/permissions');
+}
+//陪护师头像
+export function getStaffAvatar() {
+    return request.get('/photo/list');
+}

@@ -4,7 +4,7 @@
     active-text-color="#ffd04b"
     background-color="#545c64"
     class="aside-container"
-    default-active="2"
+    :default-active="active"
     text-color="#fff"
     @open="handleOpen"
     @close="handleClose"
@@ -23,13 +23,15 @@ import { computed } from "vue";
 import { useStore } from "vuex";
 
 const router = useRouter();
-const menuData = reactive(router.options.routes[0].children);
+const store = useStore();
+// const menuData = reactive(router.options.routes[0].children);
+const menuData = computed(()=>store.state.menu.routerList)
+const active = computed(()=>store.state.menu.menuActive)
 
 //console.log(router);
 
 const handleOpen = () => {};
 const handleClose = () => {};
-const store = useStore();
 const isCollapse = computed(() => store.state.menu.isCollapse);//扁平化处理
 console.log("isCollapse:", isCollapse);
 </script>

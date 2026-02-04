@@ -1,5 +1,5 @@
 <template>
-  <PanelHead/>
+  <PanelHead :route="route"/>
   <el-table :data="tableData.list" stripe>
     <el-table-column prop="id" label="ID"></el-table-column>
     <el-table-column prop="name" label="昵称"></el-table-column>
@@ -92,6 +92,9 @@ import { reactive, onMounted, ref } from "vue";
 import { getMenuSelectList, updateUser } from "../../../api";
 import dayjs from 'dayjs'
 import { Clock } from '@element-plus/icons-vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 
 const paginationData = reactive({
   pageNum: 1,

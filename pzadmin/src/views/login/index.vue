@@ -51,14 +51,18 @@
 </template>
 
 <script setup>
-import { reactive, ref } from "vue";
-import { getCode , verifyCode ,login} from "../../api"
+import { reactive, ref, computed, toRaw} from "vue";
+import { getCode , verifyCode ,login, getUserMenu} from "../../api"
 // import { ElMessage } from 'element-plus'  
 import { User, Lock, Message } from "@element-plus/icons-vue";
 import { useRouter } from "vue-router";
+import { useStore } from 'vuex'
+
+const store = useStore()
 const imgUrl = new URL("../../../public/login-head.png", import.meta.url).href;
 const router = useRouter();
 
+const routerList = computed(()=>store.state.menu.routerList)
 //切换表单（0：登录 1：注册）
 const formType = ref(0);
 //切换登陆注册
@@ -154,8 +158,15 @@ const submitForm = async (formEl) => {
             //token和用户信息存储
             localStorage.setItem("pz_token", data.data.token);
             localStorage.setItem("pz_userInfo", JSON.stringify(data.data.userInfo));
-            //登录成功跳转首页
-            router.push("/");
+            //登录成功
+            getUserMenu().then(({data})=>{
+              store.commit('dynamicMenu',data.data)
+              console.log('routerList',routerList)
+              toRaw(routerList.value).forEach(item=>{
+                router.addRoute('main',item)
+              })
+              router.push('/');
+            })
           } 
         });
       }
