@@ -45,3 +45,15 @@ export function getUserMenu() {
 export function getStaffAvatar() {
     return request.get('/photo/list');
 }
+//陪护师创建
+export function addStaff(data) {
+  return request.post('/companion',data);
+}
+//陪护师列表
+export function getStaffList(params) {
+  return request.get('/companion/list',{params});
+}
+//陪护师删除
+export function deleteStaff(data) {
+  return request.post('/delete/companion',data);
+}

@@ -96,17 +96,13 @@ import { useRoute } from 'vue-router'
 
 const route = useRoute()
 
-const paginationData = reactive({
-  pageNum: 1,
-  pageSize: 10,
-});
 //请求列表数据封装
 const getListData=()=>{
-    getUserPermission(paginationData).then(({ data }) => {
+  getUserPermission(paginationData).then(({ data }) => {
     console.log("用户权限数据：", data);
     const { list,total}=data.data
     list.forEach(element => {
-        element.create_time=dayjs(element.create_time).format('YYYY-MM-DD')
+      element.create_time=dayjs(element.create_time).format('YYYY-MM-DD')
     });
     tableData.list=list
     tableData.total=total
@@ -122,6 +118,10 @@ onMounted(() => {
 const tableData = reactive({
   list: [],
   total: 0,
+});
+const paginationData = reactive({
+  pageNum: 1,
+  pageSize: 10,
 });
 const select =ref([])
 const formRef=ref([])
