@@ -57,3 +57,15 @@ export function getStaffList(params) {
 export function deleteStaff(data) {
   return request.post('/delete/companion',data);
 }
+//订单列表
+export function getOrderList(params) {
+  return request.get('/admin/order',{params});
+}
+//服务状态修改
+export function updateOrder(data) {
+  return request.post('/update/order',data);
+}
+//首页信息
+export function dashBoard() {
+    return request.get('/report');
+}

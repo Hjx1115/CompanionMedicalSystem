@@ -52,7 +52,7 @@
 
 <script setup>
 import { reactive, ref, computed, toRaw} from "vue";
-import { getCode , verifyCode ,login, getUserMenu} from "../../api"
+import { getCode , verifyCode ,login, getUserMenu} from '@/api'
 // import { ElMessage } from 'element-plus'  
 import { User, Lock, Message } from "@element-plus/icons-vue";
 import { useRouter } from "vue-router";

@@ -68,7 +68,7 @@
       <el-form-item label="手机号" prop="mobile">
         <el-input v-model="form.mobile" placehoder="请输入手机号"></el-input>
       </el-form-item>
-      <el-form-item label="是否生效" prop="active">
+      <el-form-item label="状态" prop="active">
         <el-radio-group v-model="form.active">
           <el-radio :value="1">在职</el-radio>
           <el-radio :value="0">失效</el-radio>
@@ -172,7 +172,7 @@
 <script setup lang="ts">
 import { ref, reactive, onMounted, nextTick } from "vue";
 import {Plus,Check,Clock,Delete,InfoFilled} from "@element-plus/icons-vue";
-import {getStaffAvatar,addStaff,getStaffList,deleteStaff} from "../../../api";
+import {getStaffAvatar,addStaff,getStaffList,deleteStaff} from '@/api';
 import dayjs from "dayjs";
 import { useRoute } from 'vue-router'
 // import { ElMessage } from "element-plus/lib/components/index.js";

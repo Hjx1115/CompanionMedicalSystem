@@ -72,7 +72,7 @@
 
 <script setup lang="ts">
 import { ref, reactive, onMounted, nextTick } from "vue";
-import { getPermissionGroup, addPermissionGroup, getMenuList } from "../../../api";
+import { getPermissionGroup, addPermissionGroup, getMenuList } from '@/api';
 import { Plus } from '@element-plus/icons-vue'
 import { useRoute } from 'vue-router'
 

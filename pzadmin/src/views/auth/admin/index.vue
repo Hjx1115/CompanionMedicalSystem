@@ -87,9 +87,8 @@
 </template>
 
 <script setup lang="ts">
-import { getUserPermission } from "../../../api";
+import { getUserPermission, getMenuSelectList, updateUser} from '@/api';
 import { reactive, onMounted, ref } from "vue";
-import { getMenuSelectList, updateUser } from "../../../api";
 import dayjs from 'dayjs'
 import { Clock } from '@element-plus/icons-vue'
 import { useRoute } from 'vue-router'

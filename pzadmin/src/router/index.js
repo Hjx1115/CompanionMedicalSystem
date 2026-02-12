@@ -25,7 +25,7 @@ const routes = [
         }
 
       }else{
-        return '/'
+        return '/login'
       }
     },
     children: [
