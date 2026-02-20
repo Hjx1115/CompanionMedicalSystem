@@ -150,7 +150,7 @@
 <script setup>
 import { ref, reactive, onMounted, getCurrentInstance, computed } from "vue";
 import { useRouter } from "vue-router";
-import statusBar from "../../components/statusBar.vue";
+import statusBar from "@/components/statusBar.vue";
 import Qrcode from "qrcode";
 
 const { proxy } = getCurrentInstance();

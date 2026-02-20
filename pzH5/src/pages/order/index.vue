@@ -59,7 +59,7 @@
 <script setup>
 import { ref, reactive, onMounted, getCurrentInstance, computed, watch } from "vue";
 import { useRouter,useRoute } from "vue-router";
-import counter from "../../components/counter.vue";
+import counter from "@/components/counter.vue";
 
 const { proxy } = getCurrentInstance();
 const router = useRouter();

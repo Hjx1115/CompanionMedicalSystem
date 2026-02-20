@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 // import './style.css'
 import App from './App.vue'
 import router from './router'
-import api from './api/index'
+import api from '@api/index'
 
 const app=createApp(App)
 
