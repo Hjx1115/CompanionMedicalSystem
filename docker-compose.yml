@@ -1,0 +1,14 @@
+services:
+  medical-admin:
+    build: ./pzadmin
+    container_name: medical-admin
+    ports:
+      - "8080:80"
+    restart: always
+
+  medical-h5:
+    build: ./pzH5
+    container_name: medical-h5
+    ports:
+      - "8081:80"
+    restart: always

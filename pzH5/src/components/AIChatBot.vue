@@ -37,7 +37,7 @@ const isOpen = ref(false)
 
 const bubbleStyle = {
   position: 'fixed',
-  bottom: '20px',
+  bottom: '50px',
   right: '20px',
   width: '60px',
   height: '60px',
