@@ -11,33 +11,33 @@
       </div>
       <div class="bottom">
         <div class="item">
-          <van-image @click="goOrder(1)" width="40" height="40" src="../../../public/images/od_10.png"></van-image>
+          <van-image @click="goOrder(1)" width="40" height="40" src="/images/od_10.png"></van-image>
           <div>待支付</div>
         </div>
         <div class="item" @click="goOrder(2)">
-          <van-image width="40" height="40" src="../../../public/images/od_20.png"></van-image>
+          <van-image width="40" height="40" src="/images/od_20.png"></van-image>
           <div>待服务</div>
         </div>
         <div class="item" @click="goOrder(3)">
-          <van-image width="40" height="40" src="../../../public/images/od_30.png"></van-image>
+          <van-image width="40" height="40" src="/images/od_30.png"></van-image>
           <div>已完成</div>
         </div>
         <div class="item" @click="goOrder(4)">
-          <van-image width="40" height="40" src="../../../public/images/od_40.png"></van-image>
+          <van-image width="40" height="40" src="/images/od_40.png"></van-image>
           <div>已取消</div>
         </div>
       </div>
       <div class="foot">
         <div class="foot1">
           <div class="text1">
-            <van-image width="20" height="20" src="../../../public/images/ic_clients.png"></van-image>
+            <van-image width="20" height="20" src="/images/ic_clients.png"></van-image>
             服务对象管理
           </div>
           <div class="text2"><van-icon name="arrow"></van-icon></div>
         </div>
         <div class="foot2">
           <div class="text1">
-            <van-image width="20" height="20" src="../../../public/images/ic_share.png"></van-image>
+            <van-image width="20" height="20" src="/images/ic_share.png"></van-image>
             分享转发
           </div>
           <div class="text2"><van-icon name="arrow"></van-icon></div>
